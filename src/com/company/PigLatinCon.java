@@ -4,18 +4,24 @@ import java.util.Scanner;
 
 public class PigLatinCon {
 
-    public void proceed() {
+    public static void run() {
+        //call method for this factor function
+        System.out.println("Running PigLatin Method");
+    }
+
+    public static void proceed() {
         Scanner pro = new Scanner(System.in);
-        System.out.println("Would you like to choose another option?");
-        System.out.println("(1) Yes (2) No\"");
+        System.out.println("\nWould you like to choose another option?");
+        System.out.println("(1) Run current Algorithm \n(2) Choose another Algorithm \n(3) Exit");
+        System.out.print("\nSelection: ");
         int choice = pro.nextInt();
 
         if (choice == 1) {
-            FactCalculator.runFact;
-        } else if choice == 2(){
-            menuSelection();
-        }else {
-            System.out.println("Bye have a nice day");
+            run();
+        } else if (choice == 2) {
+            AlgorithmMenu.start();
+        } else {
+            System.out.println("\nBye have a nice day");
         }
     }
 }
