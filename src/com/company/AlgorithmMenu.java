@@ -11,29 +11,53 @@ public class AlgorithmMenu {
                 " Factor \n(5) Exit Program");
         System.out.print("\nSelection: ");
         int enteredValue = userConvo.nextInt();
+        int choice = 0;
+
+        do { // loops the method they just selected
+            menuSelection(enteredValue);
+            choice = subMenu();
+        }
+        while (choice == 1); //while they select 1 from the submenu it will loop
+
+        if (choice == 2) {
+            start(); //runs the method again
+        } else {
+            System.out.println("\nBye have a nice day");
+        }
+
+    }
+
+    public static void menuSelection(int enteredValue) {
 
         if (enteredValue == 1) {
             System.out.println("You selected Factorial Calculator");
             FactCalculator.run();
-            FactCalculator.proceed();
         } else if (enteredValue == 2) {
             System.out.println("You selected Title Case A String");
             TitleCase.run();
-            TitleCase.proceed();
         } else if (enteredValue == 3) {
             System.out.println("You selected PigLatin Converter");
             PigLatinCon.run();
-            PigLatinCon.proceed();
         } else if (enteredValue == 4) {
             System.out.println("You selected Is it a Factor");
             FactorOf.run();
-            FactorOf.proceed();
         } else if (enteredValue == 5) {
             System.out.println("\nBye have a nice day");
-        }else if (enteredValue == 1983){
+        } else if (enteredValue == 1983) {
             System.out.println("You have Unlocked a Bonus.");
             System.out.println("FUN!! Mario Stairs Algorithm. FUN!!");
+            MarioStairs.run();
         }
+
+    }
+
+    public static int subMenu() {
+        Scanner pro = new Scanner(System.in);
+        System.out.println("\nWould you like to choose another option?");
+        System.out.println("(1) Re-run current Algorithm \n(2) Choose another Algorithm \n(3) Exit");
+        System.out.print("\nSelection: ");
+        int choice = CLI.getNum();
+        return choice;
     }
 
 }

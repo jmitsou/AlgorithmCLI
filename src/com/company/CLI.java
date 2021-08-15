@@ -3,19 +3,18 @@ package com.company;
 import java.util.Scanner;
 
 public class CLI {
+    private static Scanner input = new Scanner(System.in);
 
-//    public void proceed() {
-//        Scanner pro = new Scanner(System.in);
-//        System.out.println("Would you like to choose another option?");
-//        System.out.println("(1) Yes (2) No\"");
-//        int choice = pro.nextInt();
-//
-//        if (choice == 1) {
-//            FactCalculator.runFact;
-//        } else if choice == 2(){
-//            menuSelection();
-//        }else {
-//            System.out.println("Bye have a nice day");
-//        }
-//    }
+    public static int getNum (){
+        //System.out.println("Please enter a number.");
+        int num = input.nextInt();
+        return num;
+    }
+
+    public static String getStr (String str){
+        String userStr = input.nextLine();
+
+        return userStr;
+    }
+
 }
