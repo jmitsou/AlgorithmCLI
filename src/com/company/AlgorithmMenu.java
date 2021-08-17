@@ -44,7 +44,7 @@ public class AlgorithmMenu {
         } else if (enteredValue == 5) {
             System.out.println("\nBye have a nice day");
         } else if (enteredValue == 1983) {
-            System.out.println("You have Unlocked a Bonus.");
+            System.out.println("You have Unlocked a Bonus Level.");
             System.out.println("FUN!! Mario Stairs Algorithm. FUN!!");
             MarioStairs.run();
         }

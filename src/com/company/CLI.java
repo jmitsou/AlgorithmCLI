@@ -11,9 +11,8 @@ public class CLI {
         return num;
     }
 
-    public static String getStr (String str){
+    public static String getStr (){
         String userStr = input.nextLine();
-
         return userStr;
     }
 
