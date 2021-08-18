@@ -19,7 +19,6 @@ public class TitleCase extends CLI{
         for (int i = 0; i < strArr.length; i++) {
             strArr[i] = strArr[i].substring(0,1).toUpperCase() + strArr[i].substring(1).toUpperCase();
             strArr[i] = newStr;
-
         }
         System.out.println(newStr);
 
